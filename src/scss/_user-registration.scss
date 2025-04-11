@@ -1,0 +1,215 @@
+@use "variables" as *;
+@use "sass:color" as color;
+
+.user-registration-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+
+  // ========================================
+  // Main Title 01
+  // ========================================
+  .create-h1 {
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 2.5rem;
+    text-decoration: underline;
+  }
+  // ========================================
+  // Profile Picture Add Section
+  // ========================================
+  .signup-add-avatar {
+    width: 90%;
+    height: 220px;
+    overflow: hidden;
+    margin-block: 30px 20px;
+
+    .user-avatar-list {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      overflow-y: auto;
+    }
+    .user-image {
+      width: 80px;
+      height: 80px;
+      cursor: pointer;
+
+      &:hover {
+        width: 150px;
+        height: 150px;
+      }
+    }
+
+    .marked {
+      background-color: rgb(132, 244, 132);
+    }
+  }
+  // ========================================
+  // Registration Form Section
+  // ========================================
+  .registration-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+
+    .date-group {
+      display: flex;
+      justify-content: space-between;
+
+      .datepicker-container {
+        flex: 1;
+        text-align: end;
+      }
+
+      input {
+        font-size: 1.7rem;
+        line-height: 3rem;
+        text-align: end;
+        padding-inline: 1rem;
+      }
+
+      p {
+        width: max-content;
+        font-size: 1.9rem;
+        line-height: 3rem;
+        padding-inline: 0.7rem;
+        margin: 0;
+        color: #757575;
+      }
+    }
+  }
+  .form-group {
+    width: 80%;
+    background-color: $background-lm;
+    font-size: 1.7rem;
+    border-bottom: 0.038rem solid $frame;
+    padding: 0.3rem;
+
+  }
+  .regis {
+    font-size: 1.7rem;
+    width: 95%;
+    padding: 0.5rem;
+    outline: none;
+  }
+
+  
+  // ========================================
+  // Checkbox Group Section
+  // ========================================
+  .checkbox-group {
+    width: 100%;
+    max-width: 400px;
+    margin: 0.4rem auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    label {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      color: $button-chat-sent;
+      cursor: pointer;
+      input[type="checkbox"] {
+        position: relative;
+        width: 2rem;
+        height: 2rem;
+        margin: 0;
+        border: 0.125rem solid grey;
+        border-radius: 0.4rem;
+        appearance: none;
+        cursor: pointer;
+        &:checked {
+          background-color: $frame;
+          border-color: $frame;
+          &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 45%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            width: 0.5rem;
+            height: 1rem;
+            border: solid white;
+            border-width: 0 0.2rem 0.2rem 0;
+          }
+        }
+      }
+      div {
+        flex: 1;
+        font-size: clamp(1.2rem, 3.5vw, 1.4rem);
+        line-height: 1.4;
+        color: $text-col-lm;
+        color: red;
+      }
+    }
+  }
+  // ========================================
+  // Submit Button Section
+  // ========================================
+  .signin-button {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    .submit-button {
+      font-size: 2rem;
+    }
+    button {
+      width: 100%;
+      padding: 1rem;
+      font-size: clamp(1.3rem, 4vw, 1.5rem);
+      color: $text-col-lm;
+      background-color: $text-col-dm;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: opacity 0.2s ease;
+      box-shadow: $unclicked-button;
+      &:hover {
+        opacity: 0.85;
+      }
+      &:active {
+        transform: translateY(1px);
+        box-shadow: $clicked-button;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .user-registration-container {
+    .signup-add-avatar {
+      height: 170px;
+  
+      .user-avatar-list {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        overflow-y: auto;
+      }
+      .user-image {
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        border-width: 0.3rem;
+  
+        img:hover, 
+        img:active {
+          width: 150px;
+          height: 150px;
+        }
+      }
+    }
+  }
+}

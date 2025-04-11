@@ -1,0 +1,82 @@
+@use "variables" as *;
+
+:root {
+  font-size: 62.5%;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", serif;
+  font-weight: 400;
+  border: none;
+  border-radius: 0.8rem;
+}
+
+#root {
+  width: 90vw;
+  max-width: 75rem;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.5rem;
+  width: 100%;
+  height: auto;
+  margin-top: 2.5rem;
+}
+
+button {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+input[type="date"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.dark {
+  background-color: $background-dm;
+  color: $text-col-dm;
+}
+.light {
+  background-color: $background-lm;
+  color: $text-col-lm;
+}
+
+.highlight-light,
+.highlight-dark {
+  border-radius: 0;
+}
+.highlight-light {
+  background-color: rgb(5, 249, 82);
+}
+
+.highlight-dark {
+  background-color: rgb(2, 87, 29);
+}
+
