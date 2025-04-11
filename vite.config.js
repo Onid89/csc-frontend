@@ -12,7 +12,7 @@ export default defineConfig({
   },
   server: {
     proxy: {
-      '/api': 'http://localhost:5007',
+      '/api': 'https://csc-backend-4xi9.onrender.com',
     },
   },
 });
