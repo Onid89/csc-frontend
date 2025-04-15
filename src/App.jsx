@@ -53,7 +53,7 @@ function App() {
   }
 
   return (
-    <Router basename="/">
+    <Router>
       <Routes>
         <Route path="/" element={<WelcomePage />} />
         <Route path="/register" element={<UserRegistrationFormPage />} />
